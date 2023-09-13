@@ -1,0 +1,36 @@
+/* News.css */
+
+/* Container styles for the News component */
+.container {
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  /* Row styles for the articles */
+  .row {
+    margin-bottom: 20px;
+  }
+  
+  /* Card styles for NewsItem components within the row */
+  .col-md-4 {
+    margin-bottom: 20px;
+  }
+  
+  /* Pagination button styles */
+  .btn-dark {
+    background-color: #343a40; /* Custom button background color */
+    color: #fff; /* Custom button text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-dark:disabled {
+    background-color: #6c757d; /* Custom disabled button background color */
+    cursor: not-allowed;
+  }
+  
+  .btn-dark:hover {
+    background-color: #1e2124; /* Custom button background color on hover */
+  }
+  
