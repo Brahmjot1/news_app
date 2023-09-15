@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./NewsItem.css";
+
 export default class NewsItem extends Component {
+
   truncateText(text, maxLength) {
     if (!text) return "";
     if (text.length > maxLength) {
@@ -10,7 +12,7 @@ export default class NewsItem extends Component {
   }
 
   render() {
-    const { title, description, src, newsUrl,author,date} = this.props;
+    const { title, description, src, newsUrl,author,date} =this.props;
     const maxLength = 70; // Set your desired maximum character limit for both title and description
 
     const truncatedTitle = this.truncateText(title, maxLength);
@@ -31,6 +33,7 @@ export default class NewsItem extends Component {
         style={{ height: "50%" }}
       />
     );
+  
     return (
       <div>
         <div className="card" style={{ width: "18rem", height: "100%" }}>
@@ -54,5 +57,7 @@ export default class NewsItem extends Component {
         </div>
       </div>
     );
+    
   }
 }
+

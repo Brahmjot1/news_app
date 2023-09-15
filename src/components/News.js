@@ -33,13 +33,16 @@ export default class News extends Component {
 
   async updateNews()
   {
-    let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=d9fc5f11916e4bb0a0de474a79ae15c3&page=${this.state.page}&pageSize=${this.props.pageSize}`
+    this.props.setProgress(0)
+    let url=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.api_key}&page=${this.state.page}&pageSize=${this.props.pageSize}`
     this.setState({loading:true});
-    let data = await fetch(url); 
+    let data = await fetch(url);
+    this.props.setProgress(30)
     let parsedData= await data.json();
+    this.props.setProgress(50)
     console.log(parsedData);
     this.setState({articles:parsedData.articles,totalArticles:parsedData.totalResults,loading:false})
-
+    this.props.setProgress(100)
   }
   async componentDidMount()
   {
@@ -92,6 +95,7 @@ export default class News extends Component {
  
     return (
       <div>
+        
         {this.state.loading===true && <Spinner/>}
         <div className='row'>
           {this.state.loading===false && this.state.articles.map((element)=>{
