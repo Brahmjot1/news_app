@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import logoImage from '../logo_news.png'
+import './Navbar.css'; 
 
 const Navbar = ()=> {
   
@@ -6,6 +8,8 @@ const Navbar = ()=> {
       <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
+    
+  <img src={logoImage} alt="News Bazaar Logo" className="logo-image" />
     <a className="navbar-brand" href="/">News Bazaar</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -31,7 +35,11 @@ const Navbar = ()=> {
           <a className="nav-link" href="/sports">Sports</a>  </li>
         <li className="nav-item">
           <a className="nav-link" href="/technology">Technology</a> </li>
+          <li class="nav-item ml-auto">
+        
+      </li>
       </ul>
+    
     </div>
   </div>
 </nav>

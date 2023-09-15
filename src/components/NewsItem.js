@@ -42,7 +42,10 @@ export default class NewsItem extends Component {
             className="card-body d-flex flex-column"
             style={{ height: "50%" }}
           >
-            <h5 className="card-title">{truncatedTitle} </h5>
+            {/* <h5 className="card-title">{truncatedTitle} 
+            <span class="position-absolute top-0  translate-middle badge rounded-pill bg-danger" style={{left:'90%' ,zIndex:'1'}}>
+            {!author?"Unknown":author} 
+    <span class="visually-hidden">unread messages</span> </span></h5> */}
             <p className="card-text">{truncatedDescription}</p>
             <p className="card-text"><small className="text-muted">By {!author?"Unknown":author} on {new Date(date).toGMTString()}</small></p>
             <a
