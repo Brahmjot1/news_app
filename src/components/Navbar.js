@@ -6,7 +6,8 @@ const Navbar = ()=> {
   
     return (
       <div>
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        
+        <nav className="navbar navbar-expand-lg bg-body-tertiary"  style={{ marginBottom: '100px' }} id='navbar'>
   <div className="container-fluid">
     
   <img src={logoImage} alt="News Bazaar Logo" className="logo-image" />
@@ -36,10 +37,8 @@ const Navbar = ()=> {
         <li className="nav-item">
           <a className="nav-link" href="/technology">Technology</a> </li>
           <li class="nav-item ml-auto">
-        
       </li>
       </ul>
-    
     </div>
   </div>
 </nav>

@@ -95,7 +95,6 @@ export default class News extends Component {
  
     return (
       <div>
-        
         {this.state.loading===true && <Spinner/>}
         <div className='row'>
           {this.state.loading===false && this.state.articles.map((element)=>{
