@@ -97,7 +97,7 @@ export default class News extends Component {
       <div>
         {this.state.loading===true && <Spinner/>}
         <div className='row'>
-          {this.state.loading===false && this.state.articles.map((element)=>{
+          {this.state.loading===false  && this.state.articles && this.state.articles.map((element)=>{
              return <div className='col-md-4'>
              <NewsItem title={element.title} description={element.description } src={element.urlToImage} key={element.url} newsUrl={element.url} date={element.publishedAt} author={element.author}/>
            </div>
