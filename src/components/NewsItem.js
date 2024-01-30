@@ -15,21 +15,22 @@ export default class NewsItem extends Component {
     const { title, description, src, newsUrl,author,date} =this.props;
     const maxLength = 70; // Set your desired maximum character limit for both title and description
 
-    const truncatedTitle = this.truncateText(title, maxLength);
+    // const truncatedTitle = this.truncateText(title, maxLength);
     const truncatedDescription = this.truncateText(description, maxLength);
-    const fallbackImageUrl = "https://demofree.sirv.com/nope-not-here.jpg";
-    const imageUrl = src || fallbackImageUrl;
+    // const fallbackImageUrl = "https://demofree.sirv.com/nope-not-here.jpg";
+    // const imageUrl = src || fallbackImageUrl;
     const imageElement = src ? (
       <img
         src={src}
         className="card-img-top"
-        alt="Sample"
+        alt={title||"Sample"}
         style={{ height: "50%" }}
       />
     ) : (
       <img
         src="https://demofree.sirv.com/nope-not-here.jpg"
         className="card-img-top"
+        alt="sample"
         style={{ height: "50%" }}
       />
     );
@@ -52,6 +53,7 @@ export default class NewsItem extends Component {
               href={newsUrl}
               target="_blank"
               className="btn btn-sm btn-primary"
+              rel="noopener noreferrer"
               
             >
               Read More..

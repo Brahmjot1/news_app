@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {} from 'react';
 import logoImage from '../logo_news.png'
 import './Navbar.css'; 
 
